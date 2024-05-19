@@ -16,6 +16,9 @@ struct MainView: View {
                     Text("Overview")
                         .font(.title2)
                         .bold()
+                    
+                    // MARK: Transaction List
+                    RecentTransactionList()
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -38,4 +41,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(transactionListVM)
 }
