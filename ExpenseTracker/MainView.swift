@@ -13,13 +13,17 @@ struct MainView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24){
                     //MARK: Title
-                    Text("Placeholder")
+                    Text("Overview")
+                        .font(.title2)
+                        .bold()
                 }
+                .padding()
+                .frame(maxWidth: .infinity)
                 
             }
             .background(Color.backGround)
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
+            .toolbar { 
                 // MARK: Notification Icon
                 ToolbarItem {
                     Image(systemName: "bell.badge")
