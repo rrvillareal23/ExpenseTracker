@@ -21,7 +21,7 @@ struct RecentTransactionList: View {
                 
                 // MARK: Hader Link
                 NavigationLink {
-                    EmptyView()
+                    TransactionList()
                 } label: {
                     HStack(spacing: 4) {
                         Text("See All")
@@ -46,12 +46,6 @@ struct RecentTransactionList: View {
         .shadow(color: Color.primary.opacity(0.2), radius: 10, x:0, y:5)
     }
 }
-
-let transactionListVM: TransactionListViewModel = {
-    let transactionListVM = TransactionListViewModel()
-    transactionListVM.transactions = transactionListPreviewData
-    return transactionListVM
-}()
 
 #Preview {
     RecentTransactionList()
