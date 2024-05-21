@@ -10,15 +10,13 @@ import SwiftUICharts
 
 struct MainView: View {
     @EnvironmentObject var transactionListVM: TransactionListViewModel
-    
-    var demoData: [Double] = [8, 2, 4, 6, 12, 9, 2]
-    
+        
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24){
-                    //MARK: Title                    LineView(data: demoData)
-
+                    
+                    //MARK: Title
                     Text("Overview")
                         .font(.title2)
                         .bold()
